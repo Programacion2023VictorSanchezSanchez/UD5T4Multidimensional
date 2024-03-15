@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.iesochoa.victorsanchez.ud5t4multidimensional.VentasController">
+   <children>
+      <Label prefHeight="64.0" prefWidth="199.0" text="     Ventas Semanales" />
+      <AnchorPane prefHeight="34.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="apInicio" layoutX="14.0" layoutY="6.0" text="Número de Semanas" />
+            <TextField fx:id="tfNumSemanas" layoutX="135.0" layoutY="3.0" prefHeight="25.0" prefWidth="111.0" />
+            <Button fx:id="btIniciar" layoutX="252.0" layoutY="2.0" mnemonicParsing="false" onAction="#onClickIniciar" text="Iniciar" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="apPeriodicosIniciado" prefHeight="317.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="27.0" layoutY="21.0" text="Semana" />
+            <Label layoutX="27.0" layoutY="59.0" text="Dia" />
+            <ComboBox fx:id="cbSemana" layoutX="80.0" layoutY="17.0" prefHeight="25.0" prefWidth="48.0" />
+            <ComboBox fx:id="cbDia" layoutX="80.0" layoutY="55.0" prefHeight="25.0" prefWidth="50.0" />
+            <Label layoutX="182.0" layoutY="21.0" text="Periódicos Vendidos" />
+            <TextField fx:id="tfPeriodicos" layoutX="182.0" layoutY="47.0" prefHeight="25.0" prefWidth="58.0" />
+            <Button fx:id="btGuardar" layoutX="261.0" layoutY="47.0" mnemonicParsing="false" onAction="#onClickGuardar" text="Guardar" />
+            <Button fx:id="btReiniciar" layoutX="27.0" layoutY="103.0" mnemonicParsing="false" onAction="#onClickReiniciar" text="Reiniciar" />
+            <Button fx:id="btVerTodos" layoutX="116.0" layoutY="103.0" mnemonicParsing="false" onAction="#onClickVerTodos" text="Ver-Todos" />
+            <Button fx:id="btTotalSemana" layoutX="228.0" layoutY="103.0" mnemonicParsing="false" onAction="#onClickTotalSemana" text="Total Semana" />
+            <Button fx:id="btMediaSemana" layoutX="349.0" layoutY="103.0" mnemonicParsing="false" onAction="#onClickMediaSemana" text="Media Semana" />
+            <Label fx:id="lbResultado" alignment="TOP_LEFT" layoutY="159.0" prefHeight="317.0" prefWidth="600.0" style="-fx-background-color: coral;" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
