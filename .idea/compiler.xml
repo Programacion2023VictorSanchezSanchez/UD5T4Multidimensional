@@ -9,8 +9,5 @@
         <module name="UD5T4Multidimensional" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="UD5T4Multidimensional" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>

@@ -11,7 +11,7 @@ public class VentasSemanales {
     private int [][] seguimiento;
 
     // Constructor de la clase
-    public VentasSemanales(int numSemanas, int[][] seguimiento){
+    public VentasSemanales(int numSemanas){
         this.numSemanas = numSemanas;
         this.seguimiento = new int[numSemanas][7];
     }
@@ -23,7 +23,7 @@ public class VentasSemanales {
      * @param valor que guardaremos
      */
     public void guardaVenta(int semana, int dia, int valor){
-        if(semana < this.seguimiento.length-1){
+        if(semana < this.seguimiento.length){
             this.seguimiento[semana][dia] = valor;
         }
     }
@@ -133,7 +133,7 @@ public class VentasSemanales {
     /**
      * Metodo para mostrar el total de ventas de todos los dias de todas las semanas
      */
-    public void totalDiasSemana(){
+    public String totalDiasSemana(){
         StringBuilder resultado = new StringBuilder();
 
         resultado.append(String.format("%-15s", "Día"));
@@ -152,13 +152,13 @@ public class VentasSemanales {
             int total = totalDiaSemana(i);
             resultado.append(String.format("%-15s", total));
         }
-        System.out.println(resultado);
+        return resultado.toString();
     }
 
     /**
      * Metodo para mostrar la media de todos los dias de la semana
      */
-    public void mediaSemana(){
+    public String mediaSemana(){
         StringBuilder resultado = new StringBuilder();
 
         resultado.append(String.format("%-15s", "Día"));
@@ -177,7 +177,7 @@ public class VentasSemanales {
             int media = mediaDiaSemana(i);
             resultado.append(String.format("%-15s", media));
         }
-        System.out.println(resultado);
+        return resultado.toString();
     }
 
     /**
@@ -211,5 +211,9 @@ public class VentasSemanales {
                 break;
         }
         return nombreDia;
+    }
+
+    public int getNumSemanas() {
+        return this.numSemanas;
     }
 }
